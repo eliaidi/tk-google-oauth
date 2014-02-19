@@ -1,8 +1,7 @@
 package ar.com.tahurikiller.entidades;
 
 /**
- * <h1>
- * Credential</h1>
+ * <h1>Credential</h1>
  * <p>
  * Entity what group the basic property for persistence with Google OAuth.
  * </p>
@@ -75,7 +74,8 @@ public class GoogleCredential {
 
 	/**
 	 * <p>
-	 * Replaces the previous expiration time for the new expiration time passed as parameter.
+	 * Replaces the previous expiration time for the new expiration time passed
+	 * as parameter.
 	 * </p>
 	 * 
 	 * @param el_token_expira_en
@@ -87,7 +87,8 @@ public class GoogleCredential {
 
 	/**
 	 * <p>
-	 * Replaces the previous token id for the new token's id passed as parameter.
+	 * Replaces the previous token id for the new token's id passed as
+	 * parameter.
 	 * </p>
 	 * 
 	 * @param id_token
