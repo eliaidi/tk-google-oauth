@@ -87,12 +87,11 @@ public class GoogleCredential {
 
 	/**
 	 * <p>
-	 * Reemplaza el id de token anterior con el pasado por parametro, este id de
-	 * token es provisto por Google OAuth.
+	 * Replaces the previous token id for the new token's id passed as parameter.
 	 * </p>
 	 * 
 	 * @param id_token
-	 *            Id del token.
+	 *            Id of token.
 	 */
 	public void setToken_id(String id_token) {
 		this.token_id = id_token;
@@ -100,12 +99,11 @@ public class GoogleCredential {
 
 	/**
 	 * <p>
-	 * Reemplaza el tipo de token por el provisto en el parametro, este tipo de
-	 * token es provisto por Google OAuth
+	 * Replaces the token's type for the new token's type passed as parameter.
 	 * </p>
 	 * 
 	 * @param tipo_de_token
-	 *            Tipo de token.
+	 *            Tipo of token.
 	 */
 	public void setToken_type(String tipo_de_token) {
 		this.token_type = tipo_de_token;
