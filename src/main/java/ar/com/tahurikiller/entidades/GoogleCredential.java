@@ -2,16 +2,15 @@ package ar.com.tahurikiller.entidades;
 
 /**
  * <h1>
- * Credencial</h1>
+ * Credential</h1>
  * <p>
- * Entidad que agrupa los datos basicos para mantener una conecc&oacute;n con
- * Google OAuth.
+ * Entity what group the basic property for persistence with Google OAuth.
  * </p>
  * 
  * @author Tahuri Killer
  * 
  */
-public class GoogleCredencial {
+public class GoogleCredential {
 
 	private String token_access;
 	private String token_type;
@@ -20,11 +19,10 @@ public class GoogleCredencial {
 
 	/**
 	 * <p>
-	 * Retorna el Token de acceso provisto por Google OAuth, para acceder a los
-	 * datos del usuario que se intento logear.
+	 * Return the token of access provided for Google OAuth.
 	 * </p>
 	 * 
-	 * @return String con el Token de Acceso.
+	 * @return String With the token of access.
 	 */
 	public String getToken_access() {
 		return token_access;
@@ -32,10 +30,10 @@ public class GoogleCredencial {
 
 	/**
 	 * <p>
-	 * Retorna el Tiempo que el token permanecera valido.
+	 * Return the valid time of the token.
 	 * </p>
 	 * 
-	 * @return String con el timpo que el token permanecera valido.
+	 * @return String With the valid time of token.
 	 */
 	public String getToken_expires_in() {
 		return token_expires_in;
@@ -43,10 +41,10 @@ public class GoogleCredencial {
 
 	/**
 	 * <p>
-	 * Retorna el id del token.
+	 * Return the id of token.
 	 * </p>
 	 * 
-	 * @return String con el id del token.
+	 * @return String With the id of token.
 	 */
 	public String getToken_id() {
 		return token_id;
@@ -54,10 +52,10 @@ public class GoogleCredencial {
 
 	/**
 	 * <p>
-	 * Retorna el tipo de token.
+	 * Return the type of token.
 	 * </p>
 	 * 
-	 * @return String con tipo de token.
+	 * @return String With type of token.
 	 */
 	public String getToken_type() {
 		return token_type;
@@ -65,12 +63,11 @@ public class GoogleCredencial {
 
 	/**
 	 * <p>
-	 * Reemplaza el anterior token de acceso o lo inicializa. Este token es
-	 * provisto por Google OAuth.
+	 * Replaces or initialize the last token of access.
 	 * </p>
 	 * 
 	 * @param token_de_acceso
-	 *            Es el nuevo token de acceso.
+	 *            This is new token of access.
 	 */
 	public void setToken_access(String token_de_acceso) {
 		this.token_access = token_de_acceso;
@@ -78,13 +75,11 @@ public class GoogleCredencial {
 
 	/**
 	 * <p>
-	 * Reemplaza el anterior Tiempo de expiraci&oacute;n por el tiempo pasado
-	 * como parametro, estos tiempos de expiraci&oacute;n son provistos por
-	 * Google OAuth.
+	 * Replaces the previous expiration time for the new expiration time passed as parameter.
 	 * </p>
 	 * 
 	 * @param el_token_expira_en
-	 *            Tiempo que el token permanecera valido.
+	 *            Time the token will remain valid.
 	 */
 	public void setToken_expires_in(String el_token_expira_en) {
 		this.token_expires_in = el_token_expira_en;
