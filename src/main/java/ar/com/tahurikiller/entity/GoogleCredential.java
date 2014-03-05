@@ -68,8 +68,8 @@ public class GoogleCredential {
 	 * @param token_de_acceso
 	 *            This is new token of access.
 	 */
-	public void setToken_access(String token_de_acceso) {
-		this.token_access = token_de_acceso;
+	public void setToken_access(String token_of_access) {
+		this.token_access = token_of_access;
 	}
 
 	/**
@@ -81,8 +81,8 @@ public class GoogleCredential {
 	 * @param el_token_expira_en
 	 *            Time the token will remain valid.
 	 */
-	public void setToken_expires_in(String el_token_expira_en) {
-		this.token_expires_in = el_token_expira_en;
+	public void setToken_expires_in(String token_remain) {
+		this.token_expires_in = token_remain;
 	}
 
 	/**
@@ -104,10 +104,10 @@ public class GoogleCredential {
 	 * </p>
 	 * 
 	 * @param tipo_de_token
-	 *            Tipo of token.
+	 *            Type of token.
 	 */
-	public void setToken_type(String tipo_de_token) {
-		this.token_type = tipo_de_token;
+	public void setToken_type(String type_of_token) {
+		this.token_type = type_of_token;
 	}
 
 }
