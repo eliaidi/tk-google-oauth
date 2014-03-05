@@ -1,8 +1,7 @@
 # tk-google-oauth
 
-Esta es una librería que posibilitara el acceso a OAuth de Google, dando mayor transparencia al proceso de login
+This library is used for interact with Google OAuth, for simplify the service use of Google OAuth in the process of login
 
 ## Tecnologías utilizadas
 
     Maven
-    Spring
