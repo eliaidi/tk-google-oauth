@@ -1,4 +1,4 @@
-package ar.com.tahurikiller.entidades;
+package ar.com.tahurikiller.entity;
 
 /**
  * <h1>User</h1>
