@@ -1,5 +1,7 @@
 package ar.com.tahurikiller;
 
+import java.net.URL;
+
 import ar.com.tahurikiller.entity.GoogleClient;
 
 /**
@@ -13,15 +15,20 @@ import ar.com.tahurikiller.entity.GoogleClient;
  */
 public class GoogleMediator {
 
+	private URL url;
+
 	private GoogleClient client;
 
 	/**
 	 * 
 	 * @param client
 	 *            for be used
+	 * @param url
+	 *            for be used
 	 */
-	public GoogleMediator(GoogleClient client) {
+	public GoogleMediator(GoogleClient client, URL url) {
 		setClient(client);
+		setUrl(url);
 	}
 
 	/**
@@ -32,10 +39,25 @@ public class GoogleMediator {
 	}
 
 	/**
+	 * @return the url
+	 */
+	private URL getUrl() {
+		return url;
+	}
+
+	/**
 	 * @param client
 	 *            the client to set
 	 */
 	private void setClient(GoogleClient client) {
 		this.client = client;
+	}
+
+	/**
+	 * @param url
+	 *            the url to set
+	 */
+	private void setUrl(URL url) {
+		this.url = url;
 	}
 }
