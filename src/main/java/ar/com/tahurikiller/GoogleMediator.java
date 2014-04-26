@@ -1,6 +1,11 @@
 package ar.com.tahurikiller;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.URL;
+import java.net.URLConnection;
 
 import ar.com.tahurikiller.entity.GoogleClient;
 
@@ -29,6 +34,37 @@ public class GoogleMediator {
 	public GoogleMediator(GoogleClient client, URL url) {
 		setClient(client);
 		setUrl(url);
+	}
+
+	/**
+	 * <p>
+	 * Called for post a Google OAuth for get credentials
+	 * </p>
+	 * 
+	 * @param code
+	 *            the code of autorization
+	 * 
+	 */
+	public String callPostWithCredential(String code) throws IOException {
+		String respuesta = "";
+		try {
+			String dato = "";
+			URLConnection conn = getUrl().openConnection();
+			conn.setDoOutput(true);
+			OutputStreamWriter writer = new OutputStreamWriter(
+					conn.getOutputStream());
+			writer.write(getClient().getParamsForGoogleOAuth(code));
+			writer.close();
+			BufferedReader reader = new BufferedReader(new InputStreamReader(
+					conn.getInputStream()));
+			while ((dato = reader.readLine()) != null) {
+				respuesta += dato;
+			}
+		} catch (IOException e) {
+			throw new IOException(
+					"Fail in the obtain of credentials - Connection was not open");
+		}
+		return respuesta;
 	}
 
 	/**
