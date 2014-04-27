@@ -38,14 +38,14 @@ public class GoogleMediator {
 
 	/**
 	 * <p>
-	 * Called for post a Google OAuth for get credentials
+	 * Call post of Google OAuth for get credentials
 	 * </p>
 	 * 
 	 * @param code
 	 *            the code of autorization
 	 * 
 	 */
-	public String callPostWithCredential(String code) throws IOException {
+	public String callPostForGetCredentials(String code) throws IOException {
 		String respuesta = "";
 		try {
 			String dato = "";
