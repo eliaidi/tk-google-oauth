@@ -15,6 +15,8 @@
  */
 package ar.com.tahurikiller.entity;
 
+import org.json.JSONObject;
+
 /**
  * <h1>Credential</h1>
  * <p>
@@ -28,8 +30,19 @@ public class GoogleCredential {
 
 	private String token_access;
 	private String token_type;
-	private String token_expires_in;
-	private String token_id;
+	private Integer token_expires_in;
+
+	/**
+	 * 
+	 * @param jsonCredential
+	 *            String with data of Google's Credential in format JSON
+	 */
+	public GoogleCredential(String jsonCredential) {
+		JSONObject token = new JSONObject(jsonCredential);
+		setToken_access(token.getString("access_token"));
+		setToken_expires_in(token.getInt("expires_in"));
+		setToken_type(token.getString("token_type"));
+	}
 
 	/**
 	 * <p>
@@ -47,21 +60,10 @@ public class GoogleCredential {
 	 * Return the valid time of the token.
 	 * </p>
 	 * 
-	 * @return String With the valid time of token.
+	 * @return Integer With the valid time of token.
 	 */
-	public String getToken_expires_in() {
+	public Integer getToken_expires_in() {
 		return token_expires_in;
-	}
-
-	/**
-	 * <p>
-	 * Return the id of token.
-	 * </p>
-	 * 
-	 * @return String With the id of token.
-	 */
-	public String getToken_id() {
-		return token_id;
 	}
 
 	/**
@@ -83,7 +85,7 @@ public class GoogleCredential {
 	 * @param token_de_acceso
 	 *            This is new token of access.
 	 */
-	public void setToken_access(String token_of_access) {
+	private void setToken_access(String token_of_access) {
 		this.token_access = token_of_access;
 	}
 
@@ -96,21 +98,8 @@ public class GoogleCredential {
 	 * @param el_token_expira_en
 	 *            Time the token will remain valid.
 	 */
-	public void setToken_expires_in(String token_remain) {
+	private void setToken_expires_in(Integer token_remain) {
 		this.token_expires_in = token_remain;
-	}
-
-	/**
-	 * <p>
-	 * Replaces the previous token id for the new token's id passed as
-	 * parameter.
-	 * </p>
-	 * 
-	 * @param id_token
-	 *            Id of token.
-	 */
-	public void setToken_id(String id_token) {
-		this.token_id = id_token;
 	}
 
 	/**
@@ -121,7 +110,7 @@ public class GoogleCredential {
 	 * @param tipo_de_token
 	 *            Type of token.
 	 */
-	public void setToken_type(String type_of_token) {
+	private void setToken_type(String type_of_token) {
 		this.token_type = type_of_token;
 	}
 
