@@ -23,6 +23,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 import ar.com.tahurikiller.entity.GoogleClient;
+import ar.com.tahurikiller.entity.GoogleCredential;
 
 /**
  * <h1>Mediator</h1>
@@ -58,10 +59,11 @@ public class GoogleMediator {
 	 * 
 	 * @param code
 	 *            of autorization
-	 * @return
+	 * @return {@link GoogleCredential}
 	 * @throws IOException
 	 */
-	public String callPostForGetCredentials(String code) throws IOException {
+	public GoogleCredential callPostForGetCredentials(String code)
+			throws IOException {
 		String respuesta = "";
 		try {
 			String dato = "";
@@ -80,7 +82,7 @@ public class GoogleMediator {
 			throw new IOException(
 					"Fail in the obtain of credentials - Connection was not open");
 		}
-		return respuesta;
+		return new GoogleCredential(respuesta);
 	}
 
 	/**
