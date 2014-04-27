@@ -33,25 +33,18 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- Spring Framework -->
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-context</artifactId>
-        <version>3.2.3.RELEASE</version>
-        <scope>runtime</scope>
-        <exclusions>
-            <exclusion>
-                <groupId>commons-logging</groupId>
-                <artifactId>commons-logging</artifactId>
-            </exclusion>
-        </exclusions>
-    </dependency>
-
     <!-- Logger SLF4J and LOGBACK -->
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
       <version>1.0.13</version>
+    </dependency>
+    
+    <!-- JSON -->
+    <dependency>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>20140107</version>
     </dependency>
   </dependencies>
 </project>
