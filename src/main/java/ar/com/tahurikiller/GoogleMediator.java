@@ -42,8 +42,9 @@ public class GoogleMediator {
 	 * </p>
 	 * 
 	 * @param code
-	 *            the code of autorization
-	 * 
+	 *            of autorization
+	 * @return
+	 * @throws IOException
 	 */
 	public String callPostForGetCredentials(String code) throws IOException {
 		String respuesta = "";
