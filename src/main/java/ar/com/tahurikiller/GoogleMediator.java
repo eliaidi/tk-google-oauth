@@ -27,9 +27,9 @@ public class GoogleMediator {
 	/**
 	 * 
 	 * @param client
-	 *            for be used
+	 *            for be used of type {@link GoogleClient}
 	 * @param url
-	 *            for be used
+	 *            for be used of type {@link java.net.URL}
 	 */
 	public GoogleMediator(GoogleClient client, URL url) {
 		setClient(client);
