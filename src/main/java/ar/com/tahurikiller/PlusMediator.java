@@ -23,6 +23,7 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 
 import ar.com.tahurikiller.entity.GoogleCredential;
+import ar.com.tahurikiller.entity.GoogleUser;
 
 /**
  * <h1>Mediator</h1>
@@ -56,10 +57,10 @@ public class PlusMediator {
 	 * Call get of Google Plus for get Information User
 	 * </p>
 	 * 
-	 * @return
+	 * @return {@link GoogleUser}
 	 * @throws IOException
 	 */
-	public String callGetForGetInformationUser() throws IOException {
+	public GoogleUser callGetForGetInformationUser() throws IOException {
 		String respuesta = "";
 		try{
 			String datResp = "";
@@ -74,7 +75,7 @@ public class PlusMediator {
 		}catch(IOException e){
 			throw new IOException("Fail in the obtain of Information User - Connection was not open");
 		}
-		return respuesta;
+		return new GoogleUser(respuesta);
 	}
 
 	/**
